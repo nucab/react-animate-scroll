@@ -10,8 +10,11 @@ const Waypoint = window.Waypoint;
 
 type OwnProps = {
   animateClasses?: string;
-  offset: any;
+  context: any;
   delay: 'delay-2s' | 'delay-3s' | 'delay-4s' | 'delay-5s';
+  enabled: boolean;
+  group: 'default' | string;
+  offset: any;
   speed: 'slow' | 'slower' | 'fast' | 'faster';
 };
 
@@ -19,7 +22,9 @@ const ReactAnimateScroll: React.FC<OwnProps> = props => {
   const {
     animateClasses,
     children,
+    context,
     delay = '',
+    enabled = true,
     offset = '80%',
     speed = ''
   } = props;
@@ -29,7 +34,9 @@ const ReactAnimateScroll: React.FC<OwnProps> = props => {
       cx(delay, speed, { animated: animateClasses })
     );
     const element = new Waypoint({
+      context,
       element: $current,
+      enabled,
       offset,
       handler: () => {
         $current.addClass(animateClasses);
