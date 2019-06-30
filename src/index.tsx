@@ -28,7 +28,7 @@ const ReactAnimateScroll: React.FC<OwnProps> = props => {
       }
     });
     return () => {
-      element.waypoint('destroy');
+      element.destroy();
     };
   });
   return (

@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save react-animate-scroll
+npm install react-animate-scroll
 ```
 
 ## Usage
@@ -21,10 +21,7 @@ class Example extends React.Component {
   render () {
     return (
       <ReactAnimateScroll direction="up" animateClasses="slideInUp">
-        1233333333333331 Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Fugiat quasi voluptates ipsum. Eaque, sequi non, eum laudantium
-        beatae quam dolorem dolore dicta natus modi soluta fugiat alias.
-        Voluptate, aliquam quia!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, laborum! Iste eius tenetur unde voluptate illo asperiores. Accusamus delectus est molestias consequuntur, ducimus perferendis, officiis quas neque aperiam ab voluptatibus.
       </ReactAnimateScroll>
     )
   }
