@@ -1,23 +1,41 @@
 /**
- * @class ExampleComponent
+ * @class ReactAnimateScroll
  */
 
-import * as React from 'react'
+import * as React from 'react';
+import cx from 'classnames';
 
-import styles from './styles.css'
+const $ = window.$;
+const Waypoint = window.Waypoint;
 
-export type Props = { text: string }
+type OwnProps = {
+  animateClasses: string;
+  offset: any;
+};
 
-export default class ExampleComponent extends React.Component<Props> {
-  render() {
-    const {
-      text
-    } = this.props
+const ReactAnimateScroll: React.FC<OwnProps> = props => {
+  const { animateClasses, children } = props;
+  const wrapper = React.useRef(null);
+  React.useEffect(() => {
+    const $current = $(wrapper.current).addClass(
+      cx({ animated: animateClasses })
+    );
+    const element = new Waypoint({
+      element: $current,
+      offset: '90%',
+      handler: () => {
+        $current.addClass(animateClasses);
+      }
+    });
+    return () => {
+      element.waypoint('destroy');
+    };
+  });
+  return (
+    <div>
+      <div ref={wrapper}>{children}</div>
+    </div>
+  );
+};
 
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
-  }
-}
+export default ReactAnimateScroll;
