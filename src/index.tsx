@@ -11,6 +11,8 @@ const Waypoint = window.Waypoint;
 type OwnProps = {
   animateClasses?: string;
   offset: any;
+  delay: 'delay-2s' | 'delay-3s' | 'delay-4s' | 'delay-5s';
+  speed: 'slow' | 'slower' | 'fast' | 'faster';
 };
 
 const ReactAnimateScroll: React.FC<OwnProps> = props => {
