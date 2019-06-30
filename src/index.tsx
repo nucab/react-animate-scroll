@@ -9,12 +9,12 @@ const $ = window.$;
 const Waypoint = window.Waypoint;
 
 type OwnProps = {
-  animateClasses: string;
+  animateClasses?: string;
   offset: any;
 };
 
 const ReactAnimateScroll: React.FC<OwnProps> = props => {
-  const { animateClasses, children } = props;
+  const { animateClasses, children, offset = '0' } = props;
   const wrapper = React.useRef(null);
   React.useEffect(() => {
     const $current = $(wrapper.current).addClass(
@@ -22,7 +22,7 @@ const ReactAnimateScroll: React.FC<OwnProps> = props => {
     );
     const element = new Waypoint({
       element: $current,
-      offset: '90%',
+      offset,
       handler: () => {
         $current.addClass(animateClasses);
       }
