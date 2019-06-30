@@ -14,7 +14,7 @@ type OwnProps = {
 };
 
 const ReactAnimateScroll: React.FC<OwnProps> = props => {
-  const { animateClasses, children, offset = '0' } = props;
+  const { animateClasses, children, offset = '80%' } = props;
   const wrapper = React.useRef(null);
   React.useEffect(() => {
     const $current = $(wrapper.current).addClass(
