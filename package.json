@@ -1,6 +1,6 @@
 {
   "name": "react-animate-scroll",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A scroll component that animates elements when user scrolls downwards.",
   "author": "noahjohn9259",
   "license": "MIT",
