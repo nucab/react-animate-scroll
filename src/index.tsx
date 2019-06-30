@@ -10,6 +10,7 @@ const Waypoint = window.Waypoint;
 
 type OwnProps = {
   animateClasses?: string;
+  className?: string;
   context: any;
   delay: 'delay-2s' | 'delay-3s' | 'delay-4s' | 'delay-5s';
   enabled: boolean;
@@ -22,6 +23,7 @@ const ReactAnimateScroll: React.FC<OwnProps> = props => {
   const {
     animateClasses,
     children,
+    className,
     context = window,
     delay = '',
     enabled = true,
@@ -31,7 +33,7 @@ const ReactAnimateScroll: React.FC<OwnProps> = props => {
   const wrapper = React.useRef(null);
   React.useEffect(() => {
     const $current = $(wrapper.current).addClass(
-      cx(delay, speed, { animated: animateClasses })
+      cx(className, delay, speed, { animated: animateClasses })
     );
     const element = new Waypoint({
       context,
