@@ -22,7 +22,7 @@ const ReactAnimateScroll: React.FC<OwnProps> = props => {
   const {
     animateClasses,
     children,
-    context,
+    context = window,
     delay = '',
     enabled = true,
     offset = '80%',
