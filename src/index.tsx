@@ -16,11 +16,17 @@ type OwnProps = {
 };
 
 const ReactAnimateScroll: React.FC<OwnProps> = props => {
-  const { animateClasses, children, offset = '80%' } = props;
+  const {
+    animateClasses,
+    children,
+    delay = '',
+    offset = '80%',
+    speed = ''
+  } = props;
   const wrapper = React.useRef(null);
   React.useEffect(() => {
     const $current = $(wrapper.current).addClass(
-      cx({ animated: animateClasses })
+      cx(delay, speed, { animated: animateClasses })
     );
     const element = new Waypoint({
       element: $current,
