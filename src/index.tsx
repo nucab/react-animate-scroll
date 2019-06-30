@@ -32,9 +32,9 @@ const ReactAnimateScroll: React.FC<OwnProps> = props => {
     };
   });
   return (
-    <div>
+    <>
       <div ref={wrapper}>{children}</div>
-    </div>
+    </>
   );
 };
 
