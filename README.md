@@ -15,12 +15,17 @@ npm install --save react-animate-scroll
 ```tsx
 import * as React from 'react'
 
-import MyComponent from 'react-animate-scroll'
+import ReactAnimateScroll from 'react-animate-scroll'
 
 class Example extends React.Component {
   render () {
     return (
-      <MyComponent />
+      <ReactAnimateScroll direction="up" animateClasses="slideInUp">
+        1233333333333331 Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Fugiat quasi voluptates ipsum. Eaque, sequi non, eum laudantium
+        beatae quam dolorem dolore dicta natus modi soluta fugiat alias.
+        Voluptate, aliquam quia!
+      </ReactAnimateScroll>
     )
   }
 }
