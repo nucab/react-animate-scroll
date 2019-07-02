@@ -5,7 +5,7 @@
 import * as React from 'react';
 import cx from 'classnames';
 
-const $ = window.$;
+const $ = typeof window !== undefined && window.$;
 const Waypoint = typeof window !== undefined && window.Waypoint;
 
 type OwnProps = {
