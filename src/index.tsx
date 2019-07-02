@@ -6,7 +6,7 @@ import * as React from 'react';
 import cx from 'classnames';
 
 const $ = window.$;
-const Waypoint = window.Waypoint;
+const Waypoint = typeof window !== undefined && window.Waypoint;
 
 type OwnProps = {
   animateClasses?: string;
