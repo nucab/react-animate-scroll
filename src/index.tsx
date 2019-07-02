@@ -5,9 +5,6 @@
 import * as React from 'react';
 import cx from 'classnames';
 
-const $ = typeof window !== undefined && window.$;
-const Waypoint = typeof window !== undefined && window.Waypoint;
-
 type OwnProps = {
   animateClasses?: string;
   className?: string;
@@ -32,6 +29,8 @@ const ReactAnimateScroll: React.FC<OwnProps> = props => {
   } = props;
   const wrapper = React.useRef(null);
   React.useEffect(() => {
+    const $ = typeof window !== 'undefined' && window.$;
+    const Waypoint = typeof window !== 'undefined' && window.Waypoint;
     const $current = $(wrapper.current).addClass(
       cx(className, delay, speed, { animated: animateClasses })
     );
