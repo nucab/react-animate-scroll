@@ -30,4 +30,4 @@ class Example extends React.Component {
 
 ## License
 
-MIT © [noahjohn9259](https://github.com/noahjohn9259)
+MIT © [geminstall23](https://github.com/geminstall23)
