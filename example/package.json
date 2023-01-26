@@ -8,7 +8,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^3.4.4",
     "react-animate-scroll": "file:.."
   },
   "scripts": {
